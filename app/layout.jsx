@@ -23,6 +23,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="zh-CN">
+      <head>
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MDCP79S6"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            `,
+          }}
+        />
+      </head>
       <body>
         <div className="app-shell">
           <div className="page-shell">
