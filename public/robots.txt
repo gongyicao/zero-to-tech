@@ -1,0 +1,23 @@
+# 允许所有搜索引擎抓取，但禁止抓取 /api/ 下的所有接口
+User-agent: *
+Disallow: /api/
+
+# 彻底拒绝 OpenAI 的 GPTBot 抓取整站
+User-agent: GPTBot
+Disallow: /
+
+# 彻底拒绝 OpenAI 的其他爬虫（如用户实时触发）
+User-agent: ChatGPT-User
+Disallow: /
+
+# 彻底拒绝 Anthropic (Claude) 的爬虫
+User-agent: ClaudeBot
+Disallow: /
+
+# 彻底拒绝 Anthropic 相关的抓取
+User-agent: anthropic-ai
+Disallow: /
+
+# 额外补充：拒绝 Common Crawl（很多大模型的开源训练数据来源）
+User-agent: CCBot
+Disallow: /
